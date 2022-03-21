@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Quicksand:wght@300&family=Roboto:wght@100&display=swap');
+
+*{
+    margin:             0;
+    padding:            0;
+    box-sizing:         border-box;
+    list-style-type:    none;
+}
+
+body{
+    font-family:        'Roboto', sans-serif;
+    background-color:   rgb(230, 230, 230);
+    transition:         background 0.5s linear, color 0.5s linear;
+}
+
+body.dark{
+    background-color:   rgb(15, 15, 15);
+    color:              white;
+}
+
+.check_box {display: none;}
+
+.check_box + label{
+    background:     url(../images/outline_dark_mode_black_24dp.png) no-repeat;
+    display:        inline-block;
+    width:          24px;
+    height:         24px;
+    cursor:         pointer;
+/*     transition:     background 0.5s linear;
+ */}
+
+.check_box:checked + label{
+    background:     url(../images/baseline_dark_mode_white_24dp.png) no-repeat;
+    display:        inline-block;
+    width:          24px;
+    height:         24px;
+    cursor:         pointer;
+}
+
+body.dark label{
+    background-color: white;
+}
+
+header{
+    display:            flex;
+    justify-content:    space-between;
+    align-items:        center;
+    flex-wrap:          wrap;
+    background-color:   white;
+    box-shadow:         0 0 1rem gray;
+    transition:         background 0.5s linear, color 0.5s linear;
+}
+
+header h1 {
+    font-family:    'Josefin Sans', sans-serif;
+    font-size:      35px;
+    padding-left:   10px;
+}
+
+.material-icons-outlined.md-36{font-size: 36px;}
+.material-icons-outlined.md-24{font-size: 24px;}
+
+.logo{
+    display:            flex;
+    align-items:        center;
+    justify-content:    center;
+    padding-left:       40px;
+}
+header ul{
+    display:    flex;
+    margin:     25px;
+}
+
+header li{
+    cursor:         pointer;
+    padding-left:   1rem;
+}
+
+a {
+    text-decoration:    none;
+    color:              black;
+}
+
+body.dark a{
+    color: white;
+}
+
+body.dark header{
+    background-color:   rgb(25, 25, 25);
+    box-shadow:         0 0 1rem black;
+
+}
