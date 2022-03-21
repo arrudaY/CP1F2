@@ -8,14 +8,19 @@
 }
 
 body{
-    font-family:        'Roboto', sans-serif;
-    background-color:   rgb(230, 230, 230);
-    transition:         background 0.5s linear, color 0.5s linear;
-}
+    font-family:            'Roboto', sans-serif;
+    background:             linear-gradient(130deg, #a4dfdc, #511175b9) no-repeat;
+    transition:             background 0.5s linear, color 0.5s linear;
+    display:                grid;
+    grid-template-areas:    "header header header" "aside main main" "footer footer footer";
+    grid-gap:               1rem;
+    grid-template-columns:  auto auto auto;
+    grid-template-rows:     auto 100vh auto;
+}  
 
 body.dark{
-    background-color:   rgb(15, 15, 15);
-    color:              white;
+    background: linear-gradient(130deg, rgba(40, 40, 151, 0.753), #330a4bb9) no-repeat;
+    color:      white;
 }
 
 .check_box {display: none;}
@@ -26,8 +31,7 @@ body.dark{
     width:          24px;
     height:         24px;
     cursor:         pointer;
-/*     transition:     background 0.5s linear;
- */}
+}
 
 .check_box:checked + label{
     background:     url(../images/baseline_dark_mode_white_24dp.png) no-repeat;
@@ -57,8 +61,22 @@ header h1 {
     padding-left:   10px;
 }
 
-.material-icons-outlined.md-36{font-size: 36px;}
-.material-icons-outlined.md-24{font-size: 24px;}
+.header {grid-area: header;}
+.aside  {grid-area: aside;}
+.main   {grid-area: main;}
+.footer {grid-area: footer;}
+
+.material-icons-outlined.md-24 {font-size: 24px;}
+.material-icons-outlined.md-36 {font-size: 36px;}
+.material-icons-outlined.md-96 {font-size: 96px;}
+
+.aside, .main {
+    background-color:   rgba(255, 255, 255, 0.8);
+    border-radius:      5px;
+    margin:             5px;
+}
+
+body.dark .aside, body.dark .main{background-color: rgba(54, 54, 54, 0.8);}
 
 .logo{
     display:            flex;
@@ -66,6 +84,7 @@ header h1 {
     justify-content:    center;
     padding-left:       40px;
 }
+
 header ul{
     display:    flex;
     margin:     25px;
@@ -81,12 +100,122 @@ a {
     color:              black;
 }
 
-body.dark a{
-    color: white;
-}
+body.dark a {color: white;}
 
 body.dark header{
     background-color:   rgb(25, 25, 25);
     box-shadow:         0 0 1rem black;
+}
 
+/* .btn {
+    border:         none;
+    color:          white;
+    box-shadow:     1px 2px 10px #888888;
+    padding:        15px 15px;
+    border-radius:  40px;
+    display:        inline-block;
+    cursor:         pointer;
+  }
+  
+  .btnperfil    {background-color: #4CAF50;}
+  .btndashboard {background-color: #008CBA;}
+*/
+  
+#main {
+    display:    flex;
+    flex-wrap:  wrap;
+    color:      black;
+}
+  
+#aside {display: flex;}
+  
+
+#form {
+    font-size:      1.2rem;
+    font-family:    'Roboto', sans-serif;;
+    width:          fit-content;
+    margin:         10px;
+}
+  
+#fieldset {
+    border-radius:      5px;
+    padding:            10px;
+    background-color:   white;
+    border:             none;
+    box-shadow:         1px 2px 10px #888888;
+}
+  
+legend {display: none;}
+  
+.formTitulo {
+    padding:        10px;
+    margin-left:    18px;
+}
+  
+#inputTitulo, #inputImagem, #textAreaDescricao {border: none;}
+  
+.formImagem {padding: 10px;}
+  
+.textareaDescricao p {
+    padding-top:    10px;
+    padding-bottom: 5px;
+}
+  
+section {
+    display:    flex;
+    flex-wrap:  wrap;
+    grid-area:  'section';
+}
+  
+.card {
+    min-width:        120px;
+    max-width:        440px;
+    display:          flex;
+    flex-direction:   column;
+    flex-wrap:        wrap;
+    align-content:    center;
+    justify-content:  center;
+    align-items:      center;
+    border:           none;
+    border-radius:    5px;
+    background-color: rgb(255, 255, 255, 0.829);
+    color:            black;
+    padding:          10px;
+}
+  
+.card p {
+    word-break: normal;
+    padding:    10px;
+}
+  
+.card img {
+    min-width: 100px;
+    max-width: 400px;
+}
+  
+.botoes {
+    display:    block;
+    text-align: end;
+}
+  
+.botoesFinal {
+    font-size:    14px;
+    color:        black;
+    border:       none;
+    margin:       10px;
+    font-weight:  bold;
+    cursor:       pointer;
+}
+  
+#botaoReset{
+    background-color: rgba(255, 255, 255, 0);
+    color:            rgb(62, 62, 202);
+}
+  
+#botaoSubmit{
+    background-color: rgb(62, 62, 202);
+    box-shadow:       1px 2px 10px #888888;
+    color:            white;
+    border-radius:    3px;
+    padding:          10px 15px;
 }

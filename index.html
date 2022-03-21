@@ -2,38 +2,93 @@
 <html lang="pt-br">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/styles.css">
-    <script src="scripts/app.js" defer></script>
-    <link href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp" rel="stylesheet">
-    <link rel="shortcut icon" href="images/outline_graphic_eq_black_24dp.png" type="image/x-icon">
-    <title>dh.fm</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="scripts/app.js" defer></script>
+  <link
+    href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp"
+    rel="stylesheet">
+  <link rel="shortcut icon" href="images/outline_graphic_eq_black_24dp.png" type="image/x-icon">
+  <title>dh.fm</title>
 </head>
 
 <body>
-    <header>
-        <div class="logo">
-            <span class="material-icons-outlined md-36">graphic_eq</span>
-            <h1>dh.fm</h1>
+  <header class="header">
+
+    <div class="logo">
+      <span class="material-icons-outlined md-36">graphic_eq</span>
+      <h1>dh.fm</h1>
+    </div>
+
+    <nav>
+      <ul>
+        <li><a href="http://" title="Explorar" target="_blank" rel="noopener noreferrer"><span
+              class="material-icons-outlined md-24">person_search</span></a></li>
+        <li><a href="http://" title="Notificações" target="_blank" rel="noopener noreferrer"><span
+              class="material-icons-outlined md-24">notifications</span></a></li>
+        <li>
+          <div class="container" title="Modo escuro">
+            <input type="checkbox" class="check_box" name="btn" id="btn">
+            <label for="btn"></label>
+          </div>
+        </li>
+      </ul>
+    </nav>
+
+  </header>
+
+  <aside class="aside">
+
+  </aside>
+
+  <main class="main">
+    <form action="" id="form">
+      <fieldset id="fieldset">
+        <div class="formImagem">
+          <label for="imagem" id="campoImagem"><span class="material-icons-outlined md-24">image</span></label>
+          <input type="text" name="imagem" id="inputImagem" placeholder=" Insira url imagem" required />
+        </div>
+
+        <div class="formTitulo">
+          <label for="titulo" id="campoTitulo"><span class="material-icons-outlined md-24">person</span></label>
+          <input type="text" name="titulo" id="inputTitulo" placeholder=" Insira nome do artista/banda" required />
+        </div>
+
+        <div class="formAlbum">
+          <label for="album" id="campoAlbum"><span class="material-icons-outlined md-24">album</span></label>
+          <input type="text" name="album" id="inputAlbum" placeholder="Melhor álbum" required />
         </div>
 
 
-        <nav>
-            <ul>
-                <li><a href="http://" title="Explorar" target="_blank" rel="noopener noreferrer"><span class="material-icons-outlined md-24">person_search</span></a></li>
-                <li><a href="http://" title="Notificações" target="_blank" rel="noopener noreferrer"><span class="material-icons-outlined md-24">notifications</span></a></li>
-                <li>
-                    <div class="container" title="Modo escuro">
-                        <input type="checkbox" class= "check_box" name="btn" id="btn" >
-                        <label for="btn"></label>
-                    </div>
-                </li>
-            </ul>
-        </nav>
+        <div class="textareaDescricao">
+          <label for="areaDescricao"><span class="material-icons-outlined md-24">edit_note</span></label>
+          <textarea name="areaDescricao" id="textAreaDescricao" cols="38" rows="8"
+            placeholder="Conte um pouco sobre o  motivo que esse artista ou banda é um dos seus favoritos..."
+            required></textarea>
+        </div>
 
-    </header>
+      </fieldset>
+
+      <div class="botoes">
+        <button type="reset" class="botoesFinal" id="botaoReset">
+        LIMPAR
+        </button>
+
+        <button type="submit" class="botoesFinal" id="botaoSubmit">
+        SALVAR
+        </button>
+      </div>
+
+    </form>
+    
+    <section id="containerItens"></section>
+
+  </main>
+
+  <footer class="footer"></footer>
+
 </body>
 
 </html>
