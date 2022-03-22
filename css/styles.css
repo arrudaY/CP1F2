@@ -67,7 +67,6 @@ header h1 {
     margin:             5px;
 }
 
-
 .logo{
     display:            flex;
     align-items:        center;
@@ -109,7 +108,7 @@ fieldset {
 }
 
 
-#inputFoto, #inputNome, #inputSocial, #inputTitulo, #inputImagem, #inputAlbum, #textAreaDescricao{
+#input, #textArea{
     border:         1px solid gray;
     border-radius:  5px;
     padding:        15px;
@@ -200,5 +199,7 @@ body.dark fieldset {
     box-shadow:         1px 2px 10px black;
 }
 body.dark .aside, body.dark .main   {background-color: rgba(54, 54, 54, 0.8);}
-body.dark #form                     { color: white}
-body.dark #botaoSubmit              { box-shadow: 1px 2px 10px black;}
+body.dark #form                     {color: white}
+body.dark #botaoSubmit              {box-shadow: 1px 2px 10px black;}
+
+body.dark #input, body.dark #textArea {background-color: rgba(128, 128, 128, 0);}
