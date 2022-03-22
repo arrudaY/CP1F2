@@ -1,8 +1,14 @@
+
+//DARK MODE
+
 const btn = document.getElementById("btn");
 
 btn.addEventListener("change", (e) =>{
     document.body.classList.toggle("dark", e.target.checked)
 })
+
+
+//CRIAÇÃO DE CARDS
 
 let enviarCard  = document.getElementById('botaoSubmit')
 let areaCard    = document.getElementById('containerItens')
